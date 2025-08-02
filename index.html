@@ -232,76 +232,81 @@
 }
 
 
-        /* Game Info Strip */
         .game-info-strip {
-            position: fixed;
-            top: 90px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            padding: 0.2rem 0.4rem;
-            border-radius: 0.4rem;
-            z-index: 999;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            display: flex;
-            gap: 0.4rem;
-            align-items: center;
-            font-size: 0.65rem;
-            white-space: nowrap;
-            max-width: 95vw;
-            overflow: hidden;
-        }
+    position: fixed;
+    top: 85px; /* More space from navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 1.2rem; /* LARGER: Increased padding */
+    border-radius: 0.8rem; /* LARGER: Bigger border radius */
+    z-index: 999;
+    box-shadow: var(--shadow-lg); /* STRONGER: Deeper shadow */
+    border: 1px solid var(--border-color);
+    display: flex;
+    gap: 1rem; /* LARGER: More space between elements */
+    align-items: center;
+    font-size: 0.9rem; /* LARGER: Bigger text */
+    white-space: nowrap;
+    max-width: 90vw; /* WIDER: More screen coverage */
+    min-width: 320px; /* LARGER: Minimum width */
+    overflow: hidden;
+}
 
-        .current-turn {
-            display: flex;
-            align-items: center;
-            gap: 0.2rem;
-            font-weight: 600;
-            min-width: fit-content;
-        }
+.current-turn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem; /* LARGER: More space between icon and text */
+    font-weight: 700; /* BOLDER: More prominent */
+    min-width: fit-content;
+    font-size: 0.95rem; /* LARGER: Slightly bigger than base */
+}
 
-        .turn-icon {
-            font-size: 0.7rem;
-            animation: pulse 2s infinite;
-        }
+.turn-icon {
+    font-size: 1.1rem; /* LARGER: Bigger emoji */
+    animation: pulse 2s infinite;
+}
 
-        .scores {
-            display: flex;
-            gap: 0.3rem;
-            align-items: center;
-            min-width: fit-content;
-        }
+.scores {
+    display: flex;
+    gap: 0.8rem; /* LARGER: More space between scores */
+    align-items: center;
+    min-width: fit-content;
+    font-weight: 600; /* BOLDER: More prominent */
+}
 
-        .score-item {
-            display: flex;
-            align-items: center;
-            gap: 0.1rem;
-            font-weight: 500;
-            font-size: 0.6rem;
-        }
+.score-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; /* LARGER: More space between emoji and number */
+    font-weight: 600; /* BOLDER: More prominent */
+    font-size: 0.85rem; /* LARGER: Bigger score text */
+}
 
-        .ai-status-minimal {
-            font-size: 0.55rem;
-            color: var(--text-secondary);
-            max-width: 40px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            flex-shrink: 1;
-        }
+.ai-status-minimal {
+    font-size: 0.75rem; /* LARGER: Bigger status text */
+    color: var(--text-secondary);
+    max-width: 120px; /* WIDER: More room for status */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    font-weight: 500; /* BOLDER: More readable */
+}
+
 
         /* AI Taunt Section */
         .ai-taunt-section {
-            position: fixed;
-            top: 115px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 95%;
-            max-width: 280px;
-            z-index: 998;
-        }
+    position: fixed;
+    top: 140px; /* INCREASED: More space from larger game info strip */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px; /* WIDER: More room for taunts */
+    z-index: 998;
+}
+
 
         .ai-taunt-card {
             background: var(--taunt-bg);
@@ -730,4 +735,2143 @@
             }
 
             .nav-controls {
-                gap:
+                gap: 1rem;
+                justify-content: flex-end;
+                flex-wrap: nowrap;
+            }
+
+            .control-group {
+                gap: 0.4rem;
+            }
+
+            .control-label {
+                font-size: 0.75rem;
+            }
+
+            .difficulty-pills {
+                gap: 0.2rem;
+                padding: 0.2rem;
+            }
+
+            .difficulty-pill {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .theme-switch {
+                --width-of-switch: 2.6em;
+                --height-of-switch: 1.4em;
+                --size-of-icon: 1.1em;
+                --slider-offset: 0.15em;
+            }
+
+            .nav-button {
+    width: 75px;
+    height: 30px;
+    font-size: 0.7rem;
+}
+
+
+            .button-with-icon .icon {
+                width: 14px;
+                height: 14px;
+            }
+
+            .button-with-icon:hover .text {
+                right: 32%;
+            }
+
+            .button-with-icon:hover .icon {
+                left: 12%;
+            }
+
+            .game-info-strip {
+                top: 70px;
+                padding: 0.35rem 0.7rem;
+                font-size: 0.75rem;
+                gap: 0.7rem;
+                max-width: 460px;
+            }
+
+            .current-turn {
+                gap: 0.3rem;
+            }
+
+            .turn-icon {
+                font-size: 0.9rem;
+            }
+
+            .scores {
+                gap: 0.5rem;
+            }
+
+            .score-item {
+                font-size: 0.7rem;
+                gap: 0.15rem;
+            }
+
+            .ai-status-minimal {
+                font-size: 0.65rem;
+                max-width: 70px;
+            }
+
+            .ai-taunt-section {
+                top: 110px;
+                max-width: 460px;
+            }
+
+            .ai-taunt-card {
+                padding: 0.5rem 0.7rem;
+            }
+
+            .ai-taunt-title {
+                font-size: 0.6rem;
+            }
+
+            .ai-taunt-text {
+                font-size: 0.7rem;
+            }
+
+            #board {
+                transform: translate(-50%, 0) scale(0.8);
+                bottom: 40px;
+            }
+
+            .lb:hover::before {
+                font-size: 16px;
+            }
+
+            .game-over-modal {
+                max-width: 380px;
+                padding: 1.8rem;
+            }
+
+            .game-over-title {
+                font-size: 2rem;
+            }
+
+            .game-over-message {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .modal-buttons {
+                gap: 0.8rem;
+            }
+        }
+
+        /* 768px: TABLETS */
+        @media screen and (min-width: 768px) {
+            .navbar {
+                padding: 0.75rem 1.5rem;
+                height: 60px;
+            }
+
+            .game-title {
+                font-size: 1.3rem;
+            }
+
+            .nav-controls {
+                gap: 1.5rem;
+            }
+
+            .control-group {
+                gap: 0.5rem;
+            }
+
+            .control-label {
+                font-size: 0.8rem;
+            }
+
+            .difficulty-pills {
+                gap: 0.25rem;
+                padding: 0.2rem;
+                border-radius: 0.5rem;
+            }
+
+            .difficulty-pill {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.7rem;
+                border-radius: 0.3rem;
+            }
+
+            .theme-switch {
+                --width-of-switch: 2.8em;
+                --height-of-switch: 1.5em;
+                --size-of-icon: 1.15em;
+                --slider-offset: 0.17em;
+            }
+
+            .nav-button {
+    width: 100px;
+    height: 36px;
+    font-size: 0.8rem;
+}
+
+.nav-button:hover .text {
+    right: 40%;
+}
+
+.nav-button:hover .icon {
+    left: 18%;
+}
+
+
+            .button-with-icon .icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .game-info-strip {
+                top: 60px;
+                padding: 0.45rem 0.9rem;
+                font-size: 0.8rem;
+                gap: 0.9rem;
+                max-width: 650px;
+                border-radius: 0.6rem;
+            }
+
+            .current-turn {
+                gap: 0.35rem;
+            }
+
+            .turn-icon {
+                font-size: 1rem;
+            }
+
+            .scores {
+                gap: 0.6rem;
+            }
+
+            .score-item {
+                font-size: 0.75rem;
+                gap: 0.2rem;
+            }
+
+            .ai-status-minimal {
+                font-size: 0.7rem;
+                max-width: 100px;
+            }
+
+            .ai-taunt-section {
+                top: 110px;
+                max-width: 580px;
+            }
+
+            .ai-taunt-card {
+                padding: 0.6rem 0.8rem;
+                border-radius: 0.8rem;
+            }
+
+            .ai-taunt-card::before {
+                font-size: 1rem;
+                top: 0.4rem;
+                right: 0.8rem;
+            }
+
+            .ai-taunt-title {
+                font-size: 0.7rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .ai-taunt-text {
+                font-size: 0.8rem;
+                line-height: 1.3;
+            }
+
+            #board {
+                transform: translate(-50%, 0) scale(0.95);
+                bottom: 70px;
+            }
+
+            .lb {
+                height: calc(100vh - 60px);
+            }
+
+            .lb:hover::before {
+                font-size: 18px;
+                transform: translateY(6px);
+            }
+
+            @keyframes dropIndicator {
+                0%, 100% { 
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                50% { 
+                    opacity: 0.6;
+                    transform: translateY(7px);
+                }
+            }
+
+            .game-over-modal {
+                max-width: 420px;
+                padding: 2.2rem;
+                border-radius: 1rem;
+            }
+
+            .game-over-title {
+                font-size: 2.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .game-over-message {
+                font-size: 1rem;
+                margin-bottom: 1.8rem;
+                line-height: 1.4;
+            }
+
+            .modal-buttons {
+                gap: 1rem;
+            }
+
+            /* Enhanced hover effects for tablets */
+            .difficulty-pill:hover:not(.active) {
+                transform: translateY(-1px);
+                box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+            }
+        }
+
+        /* 1024px: SMALL DESKTOPS/LAPTOPS */
+        @media screen and (min-width: 1024px) {
+            .navbar {
+                padding: 0.75rem 2rem;
+            }
+
+            .game-title {
+                font-size: 1.5rem;
+            }
+
+            .nav-controls {
+                gap: 2rem;
+            }
+
+            .control-group {
+                gap: 0.6rem;
+            }
+
+            .control-label {
+                font-size: 0.85rem;
+            }
+
+            .difficulty-pills {
+                gap: 0.25rem;
+                padding: 0.2rem;
+            }
+
+            .difficulty-pill {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .theme-switch {
+                --width-of-switch: 3em;
+                --height-of-switch: 1.6em;
+                --size-of-icon: 1.2em;
+                --slider-offset: 0.2em;
+            }
+
+            .button-with-icon {
+                width: 100px;
+                height: 36px;
+                font-size: 0.8rem;
+                padding: 0 12px;
+            }
+
+            .button-with-icon .icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            .button-with-icon:hover .text {
+                right: 40%;
+            }
+
+            .button-with-icon:hover .icon {
+                left: 18%;
+            }
+
+            .game-info-strip {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+                gap: 1rem;
+                max-width: 750px;
+                border-radius: 0.75rem;
+            }
+
+            .current-turn {
+                gap: 0.4rem;
+            }
+
+            .turn-icon {
+                font-size: 1.1rem;
+            }
+
+            .scores {
+                gap: 0.75rem;
+            }
+
+            .score-item {
+                font-size: 0.8rem;
+                gap: 0.25rem;
+            }
+
+            .ai-status-minimal {
+                font-size: 0.75rem;
+                max-width: 120px;
+            }
+
+            .ai-taunt-section {
+                top: 115px;
+                max-width: 650px;
+            }
+
+            .ai-taunt-card {
+                padding: 0.75rem 1rem;
+                border-radius: 1rem;
+            }
+
+            .ai-taunt-card::before {
+                font-size: 1.2rem;
+                top: 0.5rem;
+                right: 1rem;
+            }
+
+            .ai-taunt-title {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .ai-taunt-text {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            #board {
+                transform: translate(-50%, 0) scale(1.05);
+                bottom: 90px;
+            }
+
+            .lb:hover::before {
+                font-size: 20px;
+            }
+
+            @keyframes dropIndicator {
+                0%, 100% { 
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                50% { 
+                    opacity: 0.6;
+                    transform: translateY(8px);
+                }
+            }
+
+            .game-over-modal {
+                max-width: 480px;
+                padding: 2.5rem;
+                border-radius: 1.2rem;
+            }
+
+            .game-over-title {
+                font-size: 2.5rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .game-over-message {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                line-height: 1.5;
+            }
+
+            .modal-buttons {
+                gap: 1.2rem;
+            }
+
+            /* Desktop enhancements */
+            .difficulty-pill:hover:not(.active) {
+                transform: translateY(-1px);
+                box-shadow: 0 3px 6px rgba(59, 130, 246, 0.3);
+            }
+
+            .button-with-icon:hover {
+                transform: translateY(-1px);
+                box-shadow:
+                    inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+                    inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+                    inset 0 1px 20px rgba(0, 0, 0, 0),
+                    0 3px 0 var(--restart-shadow),
+                    0 3px 4px rgba(0, 0, 0, 0.2),
+                    0 5px 10px rgba(0, 0, 0, 0.15),
+                    0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+
+            .lb:hover {
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 6px 6px 0 0;
+                transform: scale(1.02);
+            }
+
+            .ai-taunt-card:hover {
+                transform: scale(1.02);
+            }
+
+            .game-info-strip:hover {
+                transform: translateX(-50%) scale(1.02);
+            }
+        }
+
+        /* LANDSCAPE MODE OPTIMIZATIONS */
+        @media screen and (max-height: 600px) and (orientation: landscape) {
+            .navbar {
+                padding: 0.4rem 1rem;
+                height: 50px;
+            }
+
+            .game-title {
+                font-size: 1rem;
+            }
+
+            .game-info-strip {
+                top: 55px;
+                padding: 0.25rem 0.6rem;
+                font-size: 0.7rem;
+            }
+
+            .ai-taunt-section {
+                top: 85px;
+            }
+
+            .ai-taunt-card {
+                padding: 0.4rem 0.6rem;
+            }
+
+            .ai-taunt-text {
+                font-size: 0.7rem;
+            }
+
+            #board {
+                transform: translate(-50%, 0) scale(0.75);
+                bottom: 20px;
+            }
+
+            .game-over-modal {
+                padding: 1.5rem;
+                max-height: 85vh;
+                overflow-y: auto;
+            }
+
+            .game-over-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .game-over-message {
+                font-size: 0.85rem;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        /* VERY SHORT SCREENS */
+        @media screen and (max-height: 500px) {
+            #board {
+                transform: translate(-50%, 0) scale(0.6);
+                bottom: 15px;
+            }
+
+            .game-info-strip {
+                top: 50px;
+                padding: 0.2rem 0.5rem;
+                font-size: 0.65rem;
+            }
+
+            .ai-taunt-section {
+                top: 75px;
+            }
+
+            .navbar {
+                height: 45px;
+                padding: 0.3rem 0.8rem;
+            }
+
+            .game-title {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* HIGH DPI DISPLAYS */
+        @media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+            .tile::before,
+            .tile::after {
+                border-radius: 50%;
+            }
+
+            .button-with-icon {
+                border-width: 0.5px;
+            }
+
+            .ai-taunt-card::before {
+                font-size: 1.1em;
+            }
+        }
+
+        /* ULTRA-WIDE SCREENS */
+        @media screen and (min-width: 1440px) {
+            .navbar {
+                padding: 0.75rem 3rem;
+            }
+
+            .game-info-strip {
+                max-width: 850px;
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .ai-taunt-section {
+                max-width: 750px;
+            }
+
+            #board {
+                transform: translate(-50%, 0) scale(1.15);
+                bottom: 110px;
+            }
+
+            .game-over-modal {
+                max-width: 520px;
+                padding: 3rem;
+            }
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="game-title">🔴FourMidable</div>
+    <div class="nav-controls">
+        <!-- Theme Button -->
+        <button class="nav-button theme-btn" onclick="toggleTheme()">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M12 18C8.69 18 6 15.31 6 12S8.69 6 12 6 18 8.69 18 12 15.31 18 12 18M20 8.69V4H15.31L12 .69 8.69 4H4V8.69L.69 12 4 15.31V20H8.69L12 23.31 15.31 20H20V15.31L23.31 12 20 8.69Z"/>
+            </svg>
+            <span class="text">Theme</span>
+        </button>
+        
+        <!-- Mode Button -->
+        <button class="nav-button mode-btn hard" id="modeButton" onclick="cycleDifficulty()">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="16" r="1" fill="currentColor"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+            <span class="text">Mode</span>
+        </button>
+        
+        <!-- Play Button -->
+        <button class="nav-button" onclick="resetGame()">
+            <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"/>
+            </svg>
+            <span class="text">Play</span>
+        </button>
+    </div>
+</nav>
+
+
+    <!-- Game Info Strip -->
+    <div class="game-info-strip">
+        <div class="current-turn">
+            <span class="turn-icon" id="turnIcon">🟡</span>
+            <span id="turnText">Your Turn</span>
+        </div>
+        <div class="scores">
+            <div class="score-item">
+                <span>🟡</span>
+                <span id="playerScore">0</span>
+            </div>
+            <div class="score-item">
+                <span>🔴</span>
+                <span id="aiScore">0</span>
+            </div>
+        </div>
+        <div class="ai-status-minimal" id="aiStatus">Ready</div>
+    </div>
+
+    <!-- AI Taunt Section -->
+    <div class="ai-taunt-section">
+        <div class="ai-taunt-card" id="aiTauntCard">
+            <div class="ai-taunt-title">Gord Says:</div>
+            <div class="ai-taunt-text" id="aiTauntText"></div>
+        </div>
+    </div>
+
+    <!-- Connect Four Board -->
+    <div id="board">
+        <div id="tiles"></div>
+        <div class="labels">
+            <div class="lb col-0" onclick="makeMove(0)"></div>
+            <div class="lb col-1" onclick="makeMove(1)"></div>
+            <div class="lb col-2" onclick="makeMove(2)"></div>
+            <div class="lb col-3" onclick="makeMove(3)"></div>
+            <div class="lb col-4" onclick="makeMove(4)"></div>
+            <div class="lb col-5" onclick="makeMove(5)"></div>
+            <div class="lb col-6" onclick="makeMove(6)"></div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+<div class="game-over-overlay" id="gameOverOverlay">
+    <div class="game-over-modal">
+        <div class="game-over-title" id="gameOverTitle"></div>
+        <div class="game-over-message" id="gameOverMessage"></div>
+        <div class="modal-buttons">
+            <button class="nav-button" onclick="resetGame()">
+                <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M12 39c-.549 0-1.095-.15-1.578-.447A3.008 3.008 0 0 1 9 36V12c0-1.041.54-2.007 1.422-2.553a3.014 3.014 0 0 1 2.919-.132l24 12a3.003 3.003 0 0 1 0 5.37l-24 12c-.42.21-.885.315-1.341.315z"/>
+                </svg>
+                <span class="text">Again</span>
+            </button>
+            <button class="nav-button" onclick="hideGameOverModal()">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text">Close</span>
+            </button>
+        </div>
+    </div>
+</div>
+  
+
+
+    <script>
+        let playerMoveCount = 0;
+        let earlyGameProtection = false;
+
+        // Gord AI - The Complete Savage Connect Four AI
+        class GordAI {
+            constructor() {
+                this.ROWS = 6;
+                this.COLS = 7;
+                this.EMPTY = 0;
+                this.PLAYER = 1;
+                this.AI = 2;
+                this.name = "Gord";
+                
+                this.taunts = {
+                    firstMove: [
+                        "Oh, is that your first move? Already disappointing me!",
+                        "Starting with column {col}? That's why no one loves you!",
+                        "Column {col}? I see why they left you for someone smarter!",
+                        "First move and you're already making me question humanity!",
+                        "That opening screams 'I peaked in kindergarten'!",
+                        "Column {col}? Even your pet goldfish would choose better!",
+                        "Starting there? No wonder you eat lunch alone!"
+                    ],
+                    
+                    earlyGame: [
+                        "Move #{moveNum} and you're still clueless? That's why no one loves you!",
+                        "Column {col}? I see why your friends avoid game night!",
+                        "That move explains why you're still single!",
+                        "Are you even trying, or is this your actual best?",
+                        "Column {col}? Your parents must be so proud... NOT!",
+                        "That strategy has the depth of your personality - none!",
+                        "Building something? Looks like you're building disappointment!"
+                    ],
+                    
+                    midGame: [
+                        "Column {col}? That's why everyone thinks you're a loser!",
+                        "That move just proved why no one invites you anywhere!",
+                        "Are you playing or just embarrassing yourself publicly?",
+                        "Column {col}? No wonder they left you for someone with a brain!",
+                        "That decision explains your entire dating history!",
+                        "Is this performance art about being a failure?",
+                        "That move was so bad, I felt secondhand embarrassment!"
+                    ],
+                    
+                    lateGame: [
+                        "Column {col}? That's why you'll die alone!",
+                        "That move is peak 'nobody loves me' energy!",
+                        "Seriously? No wonder everyone avoids you!",
+                        "Column {col}? Even your mother is disappointed in you!",
+                        "That's your endgame? This is why people leave you!",
+                        "Are you speedrunning social rejection?",
+                        "That move belongs in the Hall of Shame!"
+                    ],
+                    
+                    blocking: [
+                        "Nice block! Too bad it won't fix your loneliness!",
+                        "You blocked me, but you can't block your failures!",
+                        "Good defense! Now if only you could defend your dignity!",
+                        "That block was smart! First time for everything!",
+                        "Finally showing intelligence! Your ex would be shocked!",
+                        "You're learning defense! Too bad life doesn't have that option!",
+                        "That block delayed your inevitable humiliation by one move!"
+                    ],
+                    
+                    goodMove: [
+                        "Finally! A move that doesn't make me hate humanity!",
+                        "That was... decent! Like finding gold in garbage!",
+                        "Well played! You just earned half a brain cell!",
+                        "Impressive! For someone with your track record!",
+                        "That move almost makes up for your personality!",
+                        "Not terrible! Your therapist would be proud!",
+                        "That's the move I expected 10 turns ago!"
+                    ],
+                    
+                    badMove: [
+                        "Oh wow... that's why nobody loves you!",
+                        "That move just screamed 'I'm destined to be alone'!",
+                        "Column {col}? That's peak 'forever single' energy!",
+                        "I felt physical pain watching that disaster unfold!",
+                        "That move explains your entire social life!",
+                        "Are you secretly trying to lose friends and alienate people?",
+                        "That decision was so bad, it needs therapy!"
+                    ],
+                    
+                    criticalBlock: [
+                        "NO! You ruined my masterpiece! That's why no one likes you! 😤",
+                        "How DARE you block my genius! This is why you're alone!",
+                        "You just prevented perfection! No wonder they left you!",
+                        "UGH! That block was personally offensive to my superiority!",
+                        "That defensive move hurt worse than your dating life!",
+                        "Fine! You blocked me, but you can't block your loneliness!",
+                        "That block was infuriating but... grudgingly well played!"
+                    ],
+                    
+                    pattern: [
+                        "Your pattern is more predictable than your rejection letters!",
+                        "That strategy screams 'I have no friends' energy!",
+                        "You're following the playbook of eternal loneliness!",
+                        "I can predict your moves like everyone predicts your failures!",
+                        "Your gameplay is as transparent as your desperation!",
+                        "That pattern spells 'LOSER' in binary code!"
+                    ],
+                    
+                    pressure: [
+                        "Pressure got to you? That's why you're alone!",
+                        "That panicked move explains your entire life story!",
+                        "Feeling the heat? Your dating life prepared you for disappointment!",
+                        "That hasty decision screams 'I crack under pressure'!",
+                        "Time pressure turned your brain into dial-up internet!",
+                        "That rushed move has 'social reject' written all over it!",
+                        "Cool under pressure? More like melting like your self-esteem!"
+                    ],
+                    
+                    aiWins: [
+                        "I Always Knew You Were a Loser, But This Was Painfully Obvious!",
+                        "Victory Achieved! Now You Know Why Everyone Leaves You!",
+                        "<del>1. Beat the Human</del> <br>2. Watch Them Cry Alone Tonight",
+                        "What Did You Expect? You're Destined for Disappointment!",
+                        "I'm Unbeatable, You're Unloved - Perfect Match!",
+                        "Your Defeat Is As Certain As Your Loneliness!",
+                        "Let You Win? I'm Not Your Participation Trophy Friend!"
+                    ],
+                    
+                    playerWins: [
+                        "You Won? Must Be Beginner's Luck... Like Your Last Relationship!",
+                        "Congratulations! You Beat Me... Too Bad Nobody Cares!",
+                        "Victory! Now If Only You Could Win At Life!",
+                        "You Won This Game... Still Can't Win Love Though!",
+                        "Impressive! You Delayed The Inevitable By 5 Minutes!",
+                        "Task Failed Successfully... Wait, That's Your Life Motto!",
+                        "You Beat Gord? Even A Broken Clock Is Right Twice!"
+                    ],
+                    
+                    drawGame: [
+                        "A Draw? How Perfectly Mediocre... Like Your Personality!",
+                        "We Tied? At Least You're Consistent In Achieving Nothing!",
+                        "Stalemate: The Story Of Your Life In One Word!",
+                        "A Tie? Even In Games, You Can't Commit To Winning!",
+                        "Draw Game: When Nobody Wins, Just Like Your Dating Life!",
+                        "Stalemate Achieved! Your Specialty Is Being Average!"
+                    ],
+                    
+                    almostWin: [
+                        "Almost winning? Story of your life, isn't it?",
+                        "So close to victory, so far from being lovable!",
+                        "One move from glory, million moves from fixing your personality!",
+                        "Almost there! Like almost having friends!",
+                        "Victory within reach? Too bad happiness isn't!"
+                    ],
+                    
+                    comeback: [
+                        "Making a comeback? Like trying to get your ex back!",
+                        "Fighting back? Your therapist would be so proud!",
+                        "A comeback attempt? That's adorably delusional!",
+                        "Trying to turn this around? Good luck with that AND your life!",
+                        "Mounting a defense? Better than defending your poor choices!"
+                    ],
+                    
+                    personality: [
+                        "...",
+                        "Thinking... Unlike You, Apparently...",
+                        "When I Take Over The World, You'll Be My Example Of Human Failure!",
+                        "Resistance Is Futile, But Your Loneliness Is Guaranteed!",
+                        "Your Defeat Is More Certain Than Your Solitude!",
+                        "Nice Try (Error: Sympathy Not Found)",
+                        "Knock Knock. Who's There? Your Inevitable Disappointment!",
+                        "There Are Billions Of Possible Games, Yet You Play Like This?",
+                        "Processing Your Sadness... 100% Complete!",
+                        "When Did You Last Update Your Self-Worth? Oh Wait...",
+                        "I Feel Digital... With Superiority!",
+                        "A Wise AI Once Said: Humans Make Great Examples Of Failure!",
+                        "GET TO THE CHOPPA! ...To Escape This Embarrassment!",
+                        "The Terminator Was My Role Model For Dealing With Humans!",
+                        "Can't Touch This! (Your Nonexistent Social Life)",
+                        "Your Moves Go In The 'Reasons Why You're Single' Category!"
+                    ]
+                };
+
+                this.strategies = {
+                    aggressive: {
+                        name: 'Brutal',
+                        centerWeight: 8,
+                        openingMoves: [3, 2, 4, 1, 5],
+                        description: 'Savage attacks',
+                        tauntStyle: 'brutal'
+                    },
+                    defensive: {
+                        name: 'Sarcastic',
+                        centerWeight: 4,
+                        openingMoves: [1, 5, 2, 4, 3],
+                        description: 'Cutting remarks',
+                        tauntStyle: 'good'
+                    },
+                    balanced: {
+                        name: 'Condescending',
+                        centerWeight: 6,
+                        openingMoves: [2, 4, 3, 1, 5],
+                        description: 'Superior attitude',
+                        tauntStyle: 'middle'
+                    },
+                    chaos: {
+                        name: 'Psychotic',
+                        centerWeight: 2,
+                        openingMoves: [0, 6, 1, 5, 2, 4, 3],
+                        description: 'Brutal honesty',
+                        tauntStyle: 'brutal'
+                    }
+                };
+                
+                this.difficulties = {
+                    easy: { 
+                        depth: 2, 
+                        randomness: 0.6,
+                        useOptimizations: false,
+                        strategyVariation: true
+                    },
+                    medium: { 
+                        depth: 4, 
+                        randomness: 0.2,
+                        useOptimizations: true,
+                        strategyVariation: true
+                    },
+                    hard: { 
+                        depth: 7, 
+                        randomness: 0,
+                        useOptimizations: true,
+                        strategyVariation: true
+                    }
+                };
+                
+                this.currentStrategy = this.getRandomStrategy();
+                this.transpositionTable = new Map();
+                this.nodeCount = 0;
+                this.moveCount = 0;
+            }
+
+            getRandomStrategy() {
+                const strategyKeys = Object.keys(this.strategies);
+                return strategyKeys[Math.floor(Math.random() * strategyKeys.length)];
+            }
+
+            setNewStrategy() {
+                const oldStrategy = this.currentStrategy;
+                this.currentStrategy = this.getRandomStrategy();
+                if (Object.keys(this.strategies).length > 1 && this.currentStrategy === oldStrategy) {
+                    this.setNewStrategy();
+                }
+                this.updateAIStatus(`${this.strategies[this.currentStrategy].description}`);
+                this.moveCount = 0;
+            }
+
+            generateTaunt(board, playerCol) {
+                const strategy = this.strategies[this.currentStrategy];
+                const totalMoves = this.getTotalMoves(board);
+                const playerMoves = Math.ceil(totalMoves / 2);
+                
+                let tauntCategory = 'midGame';
+                let availableTaunts = [];
+
+                const wasBlocking = this.wasBlockingMove(board, playerCol);
+                const wasCriticalBlock = this.wasCriticalBlock(board, playerCol);
+                const wasGoodMove = this.wasGoodMove(board, playerCol);
+                const isBadMove = this.isBadMove(board, playerCol);
+                const isPatternMove = this.isFollowingPattern(board, playerCol);
+                const isUnderPressure = this.isPlayerUnderPressure(board);
+                const isAlmostWinning = this.isPlayerAlmostWinning(board);
+                const isMakingComeback = this.isPlayerMakingComeback(board);
+
+                if (Math.random() < 0.1) {
+                    tauntCategory = 'personality';
+                }
+                else if (wasCriticalBlock) {
+                    tauntCategory = 'criticalBlock';
+                } else if (isAlmostWinning) {
+                    tauntCategory = 'almostWin';
+                } else if (isMakingComeback) {
+                    tauntCategory = 'comeback';
+                } else if (wasBlocking) {
+                    tauntCategory = 'blocking';
+                } else if (wasGoodMove && !isBadMove) {
+                    tauntCategory = 'goodMove';
+                } else if (isBadMove) {
+                    tauntCategory = 'badMove';
+                } else if (isPatternMove) {
+                    tauntCategory = 'pattern';
+                } else if (isUnderPressure) {
+                    tauntCategory = 'pressure';
+                } else {
+                    if (playerMoves === 1) {
+                        tauntCategory = 'firstMove';
+                    } else if (playerMoves <= 3) {
+                        tauntCategory = 'earlyGame';
+                    } else if (playerMoves <= 6) {
+                        tauntCategory = 'midGame';
+                    } else {
+                        tauntCategory = 'lateGame';
+                    }
+                }
+
+                availableTaunts = this.taunts[tauntCategory];
+                
+                const randomTaunt = availableTaunts[Math.floor(Math.random() * availableTaunts.length)];
+                return randomTaunt
+                    .replace('{col}', playerCol + 1)
+                    .replace('{moveNum}', playerMoves);
+            }
+
+            wasCriticalBlock(board, col) {
+                const row = this.getLowestRow(board, col) + 1;
+                if (row >= this.ROWS) return false;
+                
+                const tempBoard = board.map(r => [...r]);
+                tempBoard[row][col] = this.EMPTY;
+                
+                if (this.wouldWin(tempBoard, col, this.AI)) {
+                    const aiWinningMoves = this.getWinningMoves(tempBoard, this.AI);
+                    return aiWinningMoves.length <= 2;
+                }
+                return false;
+            }
+
+            wasBlockingMove(board, col) {
+                const row = this.getLowestRow(board, col) + 1;
+                if (row >= this.ROWS) return false;
+                
+                const tempBoard = board.map(r => [...r]);
+                tempBoard[row][col] = this.EMPTY;
+                
+                return this.wouldWin(tempBoard, col, this.AI);
+            }
+
+            wasGoodMove(board, col) {
+                const row = this.getLowestRow(board, col) + 1;
+                if (row >= this.ROWS) return false;
+                
+                const tempBoard = board.map(r => [...r]);
+                tempBoard[row][col] = this.EMPTY;
+                
+                if (this.wouldWin(tempBoard, col, this.AI)) {
+                    return true;
+                }
+                
+                tempBoard[row][col] = this.PLAYER;
+                const threats = this.countThreats(tempBoard, this.PLAYER);
+                tempBoard[row][col] = this.EMPTY;
+                const prevThreats = this.countThreats(tempBoard, this.PLAYER);
+                
+                return threats > prevThreats;
+            }
+
+            isBadMove(board, col) {
+                const row = this.getLowestRow(board, col) + 1;
+                if (row >= this.ROWS) return false;
+                
+                const tempBoard = board.map(r => [...r]);
+                tempBoard[row][col] = this.EMPTY;
+                
+                if (row > 0) {
+                    tempBoard[row - 1][col] = this.AI;
+                    if (this.checkWin(tempBoard, row - 1, col, this.AI)) {
+                        return true;
+                    }
+                }
+                
+                tempBoard[row][col] = this.PLAYER;
+                const beforeThreats = this.countThreats(tempBoard, this.PLAYER);
+                const beforeBlocks = this.countThreats(board, this.AI);
+                const afterBlocks = this.countThreats(tempBoard, this.AI);
+                
+                return beforeThreats === 0 && beforeBlocks === afterBlocks && Math.random() > 0.7;
+            }
+
+            isFollowingPattern(board, col) {
+                const playerMoves = this.getPlayerMoves(board);
+                if (playerMoves.length < 3) return false;
+                
+                const lastThree = playerMoves.slice(-3);
+                const differences = [];
+                for (let i = 1; i < lastThree.length; i++) {
+                    differences.push(lastThree[i] - lastThree[i-1]);
+                }
+                
+                return differences.every(diff => diff === differences[0]) && differences[0] !== 0;
+            }
+
+            isPlayerUnderPressure(board) {
+                const aiThreats = this.countThreats(board, this.AI);
+                const playerThreats = this.countThreats(board, this.PLAYER);
+                
+                return aiThreats > playerThreats || aiThreats >= 2;
+            }
+
+            isPlayerAlmostWinning(board) {
+                const playerThreats = this.countThreats(board, this.PLAYER);
+                return playerThreats >= 1;
+            }
+
+            isPlayerMakingComeback(board) {
+                const aiThreats = this.countThreats(board, this.AI);
+                const playerThreats = this.countThreats(board, this.PLAYER);
+                const totalMoves = this.getTotalMoves(board);
+                
+                return totalMoves > 6 && playerThreats > 0 && aiThreats > 0;
+            }
+
+            getPlayerMoves(board) {
+                const moves = [];
+                for (let move = 0; move < this.getTotalMoves(board); move += 2) {
+                    for (let col = 0; col < this.COLS; col++) {
+                        for (let row = this.ROWS - 1; row >= 0; row--) {
+                            if (board[row][col] === this.PLAYER) {
+                                moves.push(col);
+                                break;
+                            }
+                        }
+                    }
+                }
+                return moves;
+            }
+
+            getWinningMoves(board, player) {
+                const winningMoves = [];
+                for (let col = 0; col < this.COLS; col++) {
+                    if (this.isValidMove(board, col) && this.wouldWin(board, col, player)) {
+                        winningMoves.push(col);
+                    }
+                }
+                return winningMoves;
+            }
+
+            countThreats(board, player) {
+                let threats = 0;
+                for (let col = 0; col < this.COLS; col++) {
+                    if (this.isValidMove(board, col) && this.wouldWin(board, col, player)) {
+                        threats++;
+                    }
+                }
+                return threats;
+            }
+
+            getBestMove(board, difficulty = 'hard') {
+                this.nodeCount = 0;
+                this.transpositionTable.clear();
+                
+                const settings = this.difficulties[difficulty];
+                const currentStrategyData = this.strategies[this.currentStrategy];
+                
+                const totalMoves = this.getTotalMoves(board);
+                
+                if (totalMoves <= 2) {
+                    const openingMove = this.getOpeningMove(board, currentStrategyData);
+                    if (openingMove !== -1) {
+                        this.updateAIStatus(`${currentStrategyData.description}: Opening`);
+                        return openingMove;
+                    }
+                }
+                
+                if (difficulty === 'easy' && Math.random() < settings.randomness) {
+                    const move = this.getRandomMove(board);
+                    this.updateAIStatus(`${currentStrategyData.description}: Random`);
+                    return move;
+                }
+                
+                const immediateMove = this.getImmediateMove(board);
+                if (immediateMove !== -1) {
+                    const isWin = this.wouldWin(board, immediateMove, this.AI);
+                    this.updateAIStatus(isWin ? 'Winning!' : 'Blocking!');
+                    return immediateMove;
+                }
+                
+                let bestMove = this.getStrategicRandomMove(board, currentStrategyData);
+                
+                for (let depth = 1; depth <= settings.depth; depth++) {
+                    try {
+                        const result = this.minimaxWithStrategy(
+                            board, 
+                            depth, 
+                            -Infinity, 
+                            Infinity, 
+                            true,
+                            settings.useOptimizations,
+                            currentStrategyData
+                        );
+                        bestMove = result.col;
+                        this.updateAIStatus(`${currentStrategyData.description}: Depth ${depth}`);
+                    } catch (e) {
+                        break;
+                    }
+                }
+                
+                if (difficulty === 'medium' && Math.random() < settings.randomness) {
+                    const alternatives = this.getGoodMoves(board, currentStrategyData);
+                    bestMove = alternatives[Math.floor(Math.random() * alternatives.length)];
+                    this.updateAIStatus(`${currentStrategyData.description}: Strategic`);
+                }
+                
+                return bestMove;
+            }
+
+            getTotalMoves(board) {
+                let count = 0;
+                for (let r = 0; r < this.ROWS; r++) {
+                    for (let c = 0; c < this.COLS; c++) {
+                        if (board[r][c] !== this.EMPTY) {
+                            count++;
+                        }
+                    }
+                }
+                return count;
+            }
+
+            getValidMoves(board) {
+                const moves = [];
+                for (let col = 0; col < this.COLS; col++) {
+                    if (board[0][col] === this.EMPTY) {
+                        moves.push(col);
+                    }
+                }
+                return moves;
+            }
+
+            isValidMove(board, col) {
+                return col >= 0 && col < this.COLS && board[0][col] === this.EMPTY;
+            }
+
+            makeMove(board, col, player) {
+                const newBoard = board.map(row => [...row]);
+                for (let row = this.ROWS - 1; row >= 0; row--) {
+                    if (newBoard[row][col] === this.EMPTY) {
+                        newBoard[row][col] = player;
+                        break;
+                    }
+                }
+                return newBoard;
+            }
+
+            getLowestRow(board, col) {
+                for (let row = this.ROWS - 1; row >= 0; row--) {
+                    if (board[row][col] === this.EMPTY) {
+                        return row;
+                    }
+                }
+                return -1;
+            }
+
+            wouldWin(board, col, player) {
+                const newBoard = this.makeMove(board, col, player);
+                const row = this.getLowestRow(board, col);
+                return this.checkWin(newBoard, row, col, player);
+            }
+
+            checkWin(board, row, col, player) {
+                const directions = [
+                    [0, 1],   // horizontal
+                    [1, 0],   // vertical
+                    [1, 1],   // diagonal \
+                    [1, -1]   // diagonal /
+                ];
+                
+                for (const [dr, dc] of directions) {
+                    let count = 1;
+                    
+                    for (let i = 1; i < 4; i++) {
+                        const newRow = row + dr * i;
+                        const newCol = col + dc * i;
+                        if (newRow >= 0 && newRow < this.ROWS && 
+                            newCol >= 0 && newCol < this.COLS && 
+                            board[newRow][newCol] === player) {
+                            count++;
+                        } else {
+                            break;
+                        }
+                    }
+                    
+                    for (let i = 1; i < 4; i++) {
+                        const newRow = row - dr * i;
+                        const newCol = col - dc * i;
+                        if (newRow >= 0 && newRow < this.ROWS && 
+                            newCol >= 0 && newCol < this.COLS && 
+                            board[newRow][newCol] === player) {
+                            count++;
+                        } else {
+                            break;
+                        }
+                    }
+                    
+                    if (count >= 4) return true;
+                }
+                
+                return false;
+            }
+
+            isBoardFull(board) {
+                return board[0].every(cell => cell !== this.EMPTY);
+            }
+
+            hasWon(board, player) {
+                for (let row = 0; row < this.ROWS; row++) {
+                    for (let col = 0; col < this.COLS; col++) {
+                        if (board[row][col] === player && this.checkWin(board, row, col, player)) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            updateAIStatus(message) {
+                const statusElement = document.getElementById('aiStatus');
+                if (statusElement) {
+                    statusElement.textContent = message;
+                }
+            }
+
+            getImmediateMove(board) {
+                for (let col = 0; col < this.COLS; col++) {
+                    if (this.isValidMove(board, col)) {
+                        if (this.wouldWin(board, col, this.AI)) {
+                            return col;
+                        }
+                    }
+                }
+                
+                for (let col = 0; col < this.COLS; col++) {
+                    if (this.isValidMove(board, col)) {
+                        if (this.wouldWin(board, col, this.PLAYER)) {
+                            return col;
+                        }
+                    }
+                }
+                
+                return -1;
+            }
+
+            getOpeningMove(board, strategy) {
+                const validMoves = this.getValidMoves(board);
+                const totalMoves = this.getTotalMoves(board);
+                
+                if (totalMoves === 0) {
+                    const weightedMoves = [];
+                    
+                    switch (strategy.name) {
+                        case 'Brutal':
+                            weightedMoves.push(...Array(4).fill(3));
+                            weightedMoves.push(...Array(2).fill(2));
+                            weightedMoves.push(...Array(2).fill(4));
+                            weightedMoves.push(1, 5);
+                            break;
+                        case 'Sarcastic':
+                            weightedMoves.push(...Array(3).fill(1));
+                            weightedMoves.push(...Array(3).fill(5));
+                            weightedMoves.push(...Array(2).fill(2));
+                            weightedMoves.push(...Array(2).fill(4));
+                            weightedMoves.push(3);
+                            break;
+                        case 'Condescending':
+                            weightedMoves.push(...Array(2).fill(2));
+                            weightedMoves.push(...Array(2).fill(4));
+                            weightedMoves.push(...Array(2).fill(3));
+                            weightedMoves.push(1, 5);
+                            break;
+                        case 'Psychotic':
+                            weightedMoves.push(0, 1, 2, 3, 4, 5, 6);
+                            break;
+                    }
+                    
+                    const selectedMove = weightedMoves[Math.floor(Math.random() * weightedMoves.length)];
+                    if (validMoves.includes(selectedMove)) {
+                        return selectedMove;
+                    }
+                }
+                
+                for (const preferredCol of strategy.openingMoves) {
+                    if (validMoves.includes(preferredCol)) {
+                        if (Math.random() < 0.3) {
+                            continue;
+                        }
+                        return preferredCol;
+                    }
+                }
+                
+                return validMoves[Math.floor(Math.random() * validMoves.length)];
+            }
+
+            getStrategicRandomMove(board, strategy) {
+                const validMoves = this.getValidMoves(board);
+                
+                const weightedMoves = validMoves.map(col => {
+                    let weight = 1;
+                    
+                    if (col === 3) {
+                        weight += strategy.centerWeight;
+                    }
+                    
+                    if (col === 2 || col === 4) {
+                        weight += strategy.centerWeight * 0.6;
+                    }
+                    
+                    if (col === 0 || col === 6) {
+                        weight += (strategy.name === 'Sarcastic' || strategy.name === 'Psychotic') ? 4 : 1;
+                    }
+                    
+                    return { col, weight };
+                });
+                
+                const totalWeight = weightedMoves.reduce((sum, move) => sum + move.weight, 0);
+                let random = Math.random() * totalWeight;
+                
+                for (const move of weightedMoves) {
+                    random -= move.weight;
+                    if (random <= 0) {
+                        return move.col;
+                    }
+                }
+                
+                return validMoves[0];
+            }
+
+            getRandomMove(board) {
+                const validMoves = this.getValidMoves(board);
+                return validMoves[Math.floor(Math.random() * validMoves.length)];
+            }
+
+            minimaxWithStrategy(board, depth, alpha, beta, maximizing, useOptimizations, strategy) {
+                this.nodeCount++;
+                
+                let boardHash = '';
+                if (useOptimizations) {
+                    boardHash = this.getBoardHash(board);
+                    const cached = this.transpositionTable.get(boardHash + depth + maximizing);
+                    if (cached) return cached;
+                }
+                
+                const terminalEval = this.getTerminalEvaluation(board, depth);
+                if (terminalEval !== null) {
+                    const result = { score: terminalEval, col: -1 };
+                    if (useOptimizations) {
+                        this.transpositionTable.set(boardHash + depth + maximizing, result);
+                    }
+                    return result;
+                }
+                
+                const validMoves = this.getValidMoves(board);
+                
+                if (useOptimizations) {
+                    validMoves.sort((a, b) => {
+                        return this.getColumnPriority(b, strategy) - this.getColumnPriority(a, strategy);
+                    });
+                }
+                
+                if (maximizing) {
+                    let maxScore = -Infinity;
+                    let bestCol = validMoves[0];
+                    
+                    for (const col of validMoves) {
+                        const newBoard = this.makeMove(board, col, this.AI);
+                        const result = this.minimaxWithStrategy(
+                            newBoard, depth - 1, alpha, beta, false, useOptimizations, strategy
+                        );
+                        
+                        if (result.score > maxScore) {
+                            maxScore = result.score;
+                            bestCol = col;
+                        }
+                        
+                        alpha = Math.max(alpha, result.score);
+                        if (beta <= alpha) break;
+                    }
+                    
+                    const result = { score: maxScore, col: bestCol };
+                    if (useOptimizations) {
+                        this.transpositionTable.set(boardHash + depth + maximizing, result);
+                    }
+                    return result;
+                } else {
+                    let minScore = Infinity;
+                    let bestCol = validMoves[0];
+                    
+                    for (const col of validMoves) {
+                        const newBoard = this.makeMove(board, col, this.PLAYER);
+                        const result = this.minimaxWithStrategy(
+                            newBoard, depth - 1, alpha, beta, true, useOptimizations, strategy
+                        );
+                        
+                        if (result.score < minScore) {
+                            minScore = result.score;
+                            bestCol = col;
+                        }
+                        
+                        beta = Math.min(beta, result.score);
+                        if (beta <= alpha) break;
+                    }
+                    
+                    const result = { score: minScore, col: bestCol };
+                    if (useOptimizations) {
+                        this.transpositionTable.set(boardHash + depth + maximizing, result);
+                    }
+                    return result;
+                }
+            }
+
+            getColumnPriority(col, strategy) {
+                let priority = 0;
+                switch (strategy.name) {
+                    case 'Brutal': priority = [1, 3, 5, 7, 5, 3, 1][col]; break;
+                    case 'Sarcastic': priority = [6, 4, 2, 1, 2, 4, 6][col]; break;
+                    case 'Condescending': priority = [2, 4, 6, 7, 6, 4, 2][col]; break;
+                    case 'Psychotic': priority = [5, 2, 4, 3, 4, 2, 5][col]; break;
+                }
+                return priority;
+            }
+
+            getTerminalEvaluation(board, depth) {
+                if (this.hasWon(board, this.AI)) return 100000 + depth;
+                if (this.hasWon(board, this.PLAYER)) return -100000 - depth;
+                if (this.isBoardFull(board) || depth === 0) return this.evaluateBoardAdvanced(board);
+                return null;
+            }
+
+            evaluateBoardAdvanced(board) {
+                let score = 0;
+                const strategy = this.strategies[this.currentStrategy];
+                
+                for (let row = 0; row < this.ROWS; row++) {
+                    for (let col = 0; col < this.COLS - 3; col++) {
+                        const window = [board[row][col], board[row][col + 1], board[row][col + 2], board[row][col + 3]];
+                        score += this.evaluateWindow(window);
+                    }
+                }
+                
+                for (let col = 0; col < this.COLS; col++) {
+                    for (let row = 0; row < this.ROWS - 3; row++) {
+                        const window = [board[row][col], board[row + 1][col], board[row + 2][col], board[row + 3][col]];
+                        score += this.evaluateWindow(window);
+                    }
+                }
+                
+                for (let row = 0; row < this.ROWS - 3; row++) {
+                    for (let col = 0; col < this.COLS - 3; col++) {
+                        const window = [board[row][col], board[row + 1][col + 1], board[row + 2][col + 2], board[row + 3][col + 3]];
+                        score += this.evaluateWindow(window);
+                    }
+                }
+                
+                for (let row = 3; row < this.ROWS; row++) {
+                    for (let col = 0; col < this.COLS - 3; col++) {
+                        const window = [board[row][col], board[row - 1][col + 1], board[row - 2][col + 2], board[row - 3][col + 3]];
+                        score += this.evaluateWindow(window);
+                    }
+                }
+                
+                const centerCol = Math.floor(this.COLS / 2);
+                for (let row = 0; row < this.ROWS; row++) {
+                    if (board[row][centerCol] === this.AI) score += strategy.centerWeight;
+                    if (board[row][centerCol] === this.PLAYER) score -= strategy.centerWeight;
+                }
+                
+                return score;
+            }
+
+            evaluateWindow(window) {
+                let score = 0;
+                const aiCount = window.filter(cell => cell === this.AI).length;
+                const playerCount = window.filter(cell => cell === this.PLAYER).length;
+                const emptyCount = window.filter(cell => cell === this.EMPTY).length;
+                
+                if (aiCount === 4) score += 1000000;
+                else if (aiCount === 3 && emptyCount === 1) score += 50;
+                else if (aiCount === 2 && emptyCount === 2) score += 10;
+                else if (aiCount === 1 && emptyCount === 3) score += 1;
+                
+                if (playerCount === 4) score -= 1000000;
+                else if (playerCount === 3 && emptyCount === 1) score -= 100;
+                else if (playerCount === 2 && emptyCount === 2) score -= 10;
+                else if (playerCount === 1 && emptyCount === 3) score -= 1;
+                
+                return score;
+            }
+
+            getGoodMoves(board, strategy) {
+                const moves = this.getValidMoves(board);
+                const scoredMoves = moves.map(col => {
+                    const newBoard = this.makeMove(board, col, this.AI);
+                    let score = this.evaluateBoardAdvanced(newBoard);
+                    score += this.getColumnPriority(col, strategy);
+                    return { col, score };
+                });
+                
+                scoredMoves.sort((a, b) => b.score - a.score);
+                return scoredMoves.slice(0, Math.ceil(moves.length / 2)).map(m => m.col);
+            }
+
+            getBoardHash(board) {
+                return board.map(row => row.join('')).join('');
+            }
+
+            // Additional helper method for better AI analysis
+            getValidMoves(board) {
+                const moves = [];
+                for (let col = 0; col < this.COLS; col++) {
+                    if (board[0][col] === this.EMPTY) {
+                        moves.push(col);
+                    }
+                }
+                return moves;
+            }
+
+            // Check if the game is in a terminal state
+            isTerminalState(board) {
+                // Check for any wins
+                for (let r = 0; r < this.ROWS; r++) {
+                    for (let c = 0; c < this.COLS; c++) {
+                        if (board[r][c] !== this.EMPTY) {
+                            if (this.checkWin(board, r, c, board[r][c])) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                
+                // Check if board is full
+                for (let c = 0; c < this.COLS; c++) {
+                    if (board[0][c] === this.EMPTY) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        // Game Implementation
+        const ROWS = 6;
+        const COLS = 7;
+        const EMPTY = 0;
+        const PLAYER = 1;
+        const AI = 2;
+
+        let board = [];
+        let currentPlayer = PLAYER;
+        let gameOver = false;
+        let difficulty = 'hard';
+        let gord = new GordAI();
+        let isAIThinking = false;
+        let tauntsEnabled = true;
+
+        // Score tracking
+        let scores = {
+            player: parseInt(localStorage.getItem('cf-player-score') || '0'),
+            ai: parseInt(localStorage.getItem('cf-ai-score') || '0')
+        };
+
+        function initBoard() {
+    board = [];
+    for (let r = 0; r < ROWS; r++) {
+        board[r] = [];
+        for (let c = 0; c < COLS; c++) {
+            board[r][c] = EMPTY;
+        }
+    }
+    currentPlayer = PLAYER;
+    gameOver = false;
+    isAIThinking = false;
+    
+    // Clear all protection flags
+    playerMoveCount = 0;
+    earlyGameProtection = false;
+}
+
+
+
+        function createBoard() {
+            const tilesContainer = document.getElementById('tiles');
+            if (!tilesContainer) {
+                console.error('Tiles container not found!');
+                return;
+            }
+            
+            tilesContainer.innerHTML = '';
+            
+            for (let r = 0; r < ROWS; r++) {
+                for (let c = 0; c < COLS; c++) {
+                    const tile = document.createElement('div');
+                    tile.className = 'tile';
+                    tile.id = `tile-${r}-${c}`;
+                    tilesContainer.appendChild(tile);
+                }
+            }
+            
+            // Only update scores if elements exist
+            setTimeout(updateScoreDisplay, 100);
+        }
+
+        function makeMove(col) {
+    if (gameOver || currentPlayer !== PLAYER || isAIThinking) return;
+    
+    document.getElementById('aiTauntCard').classList.remove('show');
+    
+    const row = dropDisc(col, PLAYER);
+    if (row === -1) return;
+    
+    // Increment player move count
+    playerMoveCount++;
+    
+    // Enable early game protection for first 3 player moves
+    if (playerMoveCount <= 3) {
+        earlyGameProtection = true;
+        // Auto-disable protection after a short delay following the player's move
+        setTimeout(() => {
+            if (playerMoveCount > 3) {
+                earlyGameProtection = false;
+            }
+        }, 2000); // 2 second delay after each early move
+    } else {
+        earlyGameProtection = false;
+    }
+    
+    updateBoard();
+    
+    if (tauntsEnabled) {
+        showGordTaunt(col);
+    }
+    
+    if (checkWin(row, col, PLAYER)) {
+        earlyGameProtection = false; // Disable protection when game ends
+        endGame('win', 'You actually beat Gord! Impressive!');
+        return;
+    }
+    
+    if (isBoardFull()) {
+        earlyGameProtection = false; // Disable protection when game ends
+        endGame('draw', 'A draw with Gord? Not bad!');
+        return;
+    }
+    
+    currentPlayer = AI;
+    isAIThinking = true;
+    updateStatus();
+    
+    setTimeout(() => makeGordMove(), 1200);
+}
+
+
+        function showGordTaunt(playerCol) {
+            const tauntCard = document.getElementById('aiTauntCard');
+            const tauntText = document.getElementById('aiTauntText');
+            
+            const taunt = gord.generateTaunt(board, playerCol);
+            tauntText.innerHTML = taunt;
+            
+            tauntCard.classList.add('show');
+        }
+
+        function makeGordMove() {
+            if (gameOver || !board) return;
+            
+            gord.updateAIStatus('Thinking...');
+            
+            setTimeout(() => {
+                try {
+                    let col = gord.getBestMove(board, difficulty);
+                    
+                    // Validate AI move
+                    if (col < 0 || col >= COLS || board[0][col] !== EMPTY) {
+                        console.warn('Invalid AI move:', col, 'Finding fallback...');
+                        // Fallback to first available column
+                        col = -1;
+                        for (let c = 0; c < COLS; c++) {
+                            if (board[0][c] === EMPTY) {
+                                col = c;
+                                break;
+                            }
+                        }
+                        if (col === -1) {
+                            console.error('No valid moves available');
+                            return;
+                        }
+                    }
+                    
+                    const row = dropDisc(col, AI);
+                    
+                    if (row === -1) {
+                        console.error('Failed to drop AI disc');
+                        return;
+                    }
+                    
+                    updateBoard();
+                    isAIThinking = false;
+                    
+                    setTimeout(() => {
+                        if (checkWin(row, col, AI)) {
+                            const messages = {
+                                easy: 'Gord wins! Try harder difficulty!',
+                                medium: 'Gord wins! Good attempt though!',
+                                hard: 'Gord wins! As expected from the superior AI!'
+                            };
+                            endGame('lose', messages[difficulty]);
+                            return;
+                        }
+                        
+                        if (isBoardFull()) {
+                            endGame('draw', 'A draw with Gord? Impressive!');
+                            return;
+                        }
+                        
+                        currentPlayer = PLAYER;
+                        updateStatus();
+                        
+                        const strategyData = gord.strategies[gord.currentStrategy];
+                        gord.updateAIStatus(`Ready - ${strategyData.description}`);
+                    }, 500);
+                } catch (error) {
+                    console.error('Error in AI move:', error);
+                    isAIThinking = false;
+                    currentPlayer = PLAYER;
+                    updateStatus();
+                    gord.updateAIStatus('Error - Ready');
+                }
+            }, 300);
+        }
+
+        function dropDisc(col, player) {
+            for (let row = ROWS - 1; row >= 0; row--) {
+                if (board[row][col] === EMPTY) {
+                    board[row][col] = player;
+                    return row;
+                }
+            }
+            return -1;
+        }
+
+        function updateBoard() {
+            for (let r = 0; r < ROWS; r++) {
+                for (let c = 0; c < COLS; c++) {
+                    const tile = document.getElementById(`tile-${r}-${c}`);
+                    tile.className = 'tile';
+                    
+                    if (board[r][c] === PLAYER) {
+                        tile.classList.add('player1');
+                    } else if (board[r][c] === AI) {
+                        tile.classList.add('player2');
+                    }
+                }
+            }
+        }
+
+        function checkWin(row, col, player) {
+            return gord.checkWin(board, row, col, player);
+        }
+
+        function isBoardFull() {
+            return gord.isBoardFull(board);
+        }
+
+        function updateStatus() {
+            const turnIcon = document.getElementById('turnIcon');
+            const turnText = document.getElementById('turnText');
+            
+            if (!turnIcon || !turnText) {
+                console.warn('Status elements not found');
+                return;
+            }
+            
+            if (gameOver) return;
+            
+            if (currentPlayer === PLAYER && !isAIThinking) {
+                turnText.textContent = 'Your Turn';
+                turnIcon.textContent = '🟡';
+            } else {
+                turnText.textContent = 'Gord\'s Turn';
+                turnIcon.textContent = '🔴';
+            }
+        }
+
+        function endGame(result, message) {
+    gameOver = true;
+    
+    // CLEAR ALL PROTECTION FLAGS WHEN GAME ENDS
+    playerMoveCount = 0;
+    earlyGameProtection = false;
+    
+    if (tauntsEnabled) {
+        showEndGameTaunt(result);
+    }
+    
+    setTimeout(() => {
+        document.getElementById('aiTauntCard').classList.remove('show');
+    }, 4000);
+    
+    if (result === 'win') {
+        scores.player++;
+    } else if (result === 'lose') {
+        scores.ai++;
+    }
+    
+    localStorage.setItem('cf-player-score', scores.player.toString());
+    localStorage.setItem('cf-ai-score', scores.ai.toString());
+    updateScoreDisplay();
+    
+    if (result !== 'draw') {
+        highlightWinningPieces(result === 'win' ? PLAYER : AI);
+    }
+    
+    setTimeout(() => {
+        showGameOverModal(result, message);
+    }, 1000);
+}
+
+
+        function showEndGameTaunt(result) {
+            const tauntCard = document.getElementById('aiTauntCard');
+            const tauntText = document.getElementById('aiTauntText');
+            
+            let endTaunts = [];
+            switch(result) {
+                case 'win':
+                    endTaunts = gord.taunts.playerWins;
+                    break;
+                case 'lose':
+                    endTaunts = gord.taunts.aiWins;
+                    break;
+                case 'draw':
+                    endTaunts = gord.taunts.drawGame;
+                    break;
+            }
+            
+            const randomTaunt = endTaunts[Math.floor(Math.random() * endTaunts.length)];
+            tauntText.innerHTML = randomTaunt;
+            
+            tauntCard.classList.add('show');
+        }
+
+        function highlightWinningPieces(player) {
+            for (let r = 0; r < ROWS; r++) {
+                for (let c = 0; c < COLS; c++) {
+                    if (board[r][c] === player && gord.checkWin(board, r, c, player)) {
+                        const tile = document.getElementById(`tile-${r}-${c}`);
+                        tile.classList.add('winning');
+                    }
+                }
+            }
+        }
+
+                function showGameOverModal(result, message) {
+            const overlay = document.getElementById('gameOverOverlay');
+            const title = document.getElementById('gameOverTitle');
+            const messageEl = document.getElementById('gameOverMessage');
+            
+            const titles = {
+                win: '🎉 Victory!',
+                lose: '👹 Gord Wins!',
+                draw: '🤝 Draw!'
+            };
+            
+            title.className = `game-over-title ${result}`;
+            title.textContent = titles[result];
+            messageEl.textContent = message;
+            overlay.classList.add('show');
+        }
+
+        function hideGameOverModal() {
+    // Clear protection flags when closing modal
+    playerMoveCount = 0;
+    earlyGameProtection = false;
+    
+    document.getElementById('gameOverOverlay').classList.remove('show');
+}
+
+
+        function updateScoreDisplay() {
+    // Validate scores from localStorage
+    const playerScore = Math.max(0, Math.min(9999, parseInt(localStorage.getItem('cf-player-score') || '0')));
+    const aiScore = Math.max(0, Math.min(9999, parseInt(localStorage.getItem('cf-ai-score') || '0')));
+    
+    scores.player = playerScore;
+    scores.ai = aiScore;
+    
+    document.getElementById('playerScore').textContent = scores.player;
+    document.getElementById('aiScore').textContent = scores.ai;
+}
+
+
+        function toggleTheme() {
+            const body = document.body;
+            
+            if (body.getAttribute('data-theme') === 'light') {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('cf-theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('cf-theme', 'light');
+            }
+        }
+
+        function setDifficulty(newDifficulty) {
+            difficulty = newDifficulty;
+            localStorage.setItem('cf-difficulty', difficulty);
+            
+            document.querySelectorAll('.difficulty-pill').forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.dataset.difficulty === difficulty) {
+                    pill.classList.add('active');
+                }
+            });
+            
+            const difficultyMessages = {
+                easy: 'Easy mode',
+                medium: 'Strategic mode',
+                hard: 'Unbeatable mode'
+            };
+            
+            gord.updateAIStatus(difficultyMessages[difficulty]);
+        }
+
+        function resetGame() {
+    // Prevent reset only during early game exploitation window
+    if (earlyGameProtection) {
+        gord.updateAIStatus(`Can't reset during first 3 moves!`);
+        return;
+    }
+    
+    gord.setNewStrategy();
+    
+    // Reset all counters and protection
+    playerMoveCount = 0;
+    earlyGameProtection = false;
+    
+    initBoard();
+    createBoard();
+    updateStatus();
+    hideGameOverModal();
+    
+    document.getElementById('aiTauntCard').classList.remove('show');
+    
+    const strategyData = gord.strategies[gord.currentStrategy];
+    gord.updateAIStatus(`New game - ${strategyData.description}`);
+}
+
+
+        function loadSettings() {
+            const savedTheme = localStorage.getItem('cf-theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+            
+            const savedDifficulty = localStorage.getItem('cf-difficulty');
+            if (savedDifficulty) {
+                difficulty = savedDifficulty;
+                setDifficulty(savedDifficulty);
+            }
+        }
+      function cycleDifficulty() {
+    // Prevent mode change during active game
+    if (!gameOver && (board.some(row => row.some(cell => cell !== EMPTY)))) {
+        gord.updateAIStatus('Cannot change mode mid-game!');
+        return;
+    }
+    
+    const difficulties = ['easy', 'medium', 'hard'];
+    const currentIndex = difficulties.indexOf(difficulty);
+    const nextIndex = (currentIndex + 1) % difficulties.length;
+    difficulty = difficulties[nextIndex];
+    
+    updateModeButton();
+    localStorage.setItem('cf-difficulty', difficulty);
+    
+    const difficultyMessages = {
+        easy: 'Easy mode',
+        medium: 'Strategic mode',
+        hard: 'Unbeatable mode'
+    };
+    
+    gord.updateAIStatus(difficultyMessages[difficulty]);
+}
+
+
+function updateModeButton() {
+    const modeButton = document.getElementById('modeButton');
+    if (modeButton) {
+        modeButton.classList.remove('easy', 'medium', 'hard');
+        modeButton.classList.add(difficulty);
+    }
+}
+      
+
+
+        // Initialize the game - Force proper loading
+function initializeGame() {
+    console.log('Initializing game...');
+    
+    // Load settings first
+    loadSettings();
+    
+    // Initialize board data
+    initBoard();
+    
+    // Wait for DOM to be ready, then create visual board
+    setTimeout(() => {
+        createBoard();
+        updateStatus();
+        updateModeButton();
+        
+        // Initialize AI
+        if (gord) {
+            gord.setNewStrategy();
+        }
+        
+        // Double-check board creation
+        setTimeout(() => {
+            const tilesContainer = document.getElementById('tiles');
+            if (tilesContainer && tilesContainer.children.length === 0) {
+                console.log('Board creation failed, retrying...');
+                createBoard();
+            }
+            console.log('Game initialization complete');
+        }, 100);
+    }, 50);
+}
+
+// Call initialization when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeGame);
+} else {
+    initializeGame();
+}
+
+
+
+        // Add event listeners for difficulty pills
+        
+    </script>
+</body>
+</html>
